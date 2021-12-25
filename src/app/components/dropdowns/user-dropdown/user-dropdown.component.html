@@ -1,0 +1,50 @@
+<a
+  class="text-blueGray-500 block"
+  (click)="toggleDropdown($event)"
+  #btnDropdownRef
+>
+  <div class="items-center flex">
+    <span
+      class="text-sm text-white inline-flex items-center justify-center "
+    >
+     Hi {{ name }} ! 
+    </span>
+  </div>
+</a>
+<div class="min-w-48 z-50" #popoverDropdownRef>
+  <div
+    class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1 min-w-48"
+    [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'"
+  >
+    <a
+    [routerLink]="['/admin/settings']"
+      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+    >
+    <i
+    class="text-blueGray-400 fas fa-user text-lg leading-lg mr-2"
+  ></i>
+      Profile
+    </a>
+    <a
+    routerLink="/settings"
+      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+    >
+
+    <i
+    class="text-blueGray-400 fas fa-wallet text-lg leading-lg mr-2"
+  ></i>
+     Payements
+    </a>
+    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
+    <a
+
+      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+    >
+
+    <i
+    class="text-blueGray-400 fas fa-sign-out-alt text-lg leading-lg mr-2"
+  ></i>
+      Logout
+    </a>
+  </div>
+</div>
